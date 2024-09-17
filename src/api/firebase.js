@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_FIREBASE_PJ_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const auth = getAuth();
 const db = getDatabase();
@@ -45,8 +45,6 @@ async function checkAdmin(userInfo) {
       return admins.includes(userInfo.uid);
     } else {
       return false;
-      // 유저 정보 등록
-      // writeUserData(uid, displayName, email, photoURL, false);
     }
   }).catch(console.error);
 }
@@ -80,30 +78,6 @@ export async function getProducts() {
 }
 
 export async function addCart(uid, productId, cart) {
-  // get(child(dbRef, `cart/${uid}/${productId}`))
-  // .then((snapshot) => {
-  //   if (snapshot.exists()) {
-  //     // const cartInfo = snapshot.val();
-  //     // const cartSizes = Object.keys(cartInfo);
-
-  //     // if (cartSizes.includes(size)) cartInfo[size] = cartInfo[size] + 1;
-  //     // else cartInfo[size] = 1;
-
-  //     // setNotice('장바구니에 등록되었습니다.');
-  //     // setTimeout(() => {
-  //     //   setNotice(null);
-  //     // }, 3000);
-  //   } else {
-  //     // 새로운 장바구니 데이터로 갱신하기
-  //     console.log("data empty");
-  //     writeUserData(uid, productId, {[size]: 1});
-  //   }
-  // }).catch((error) => {
-  //   console.error(error);
-  // });
-
-  // // 새로운 장바구니 데이터로 갱신하기
-  // writeUserData(uid, productId, cartInfo);
   return set(ref(db, `cart/${uid}/${productId}`), cart);
 }
 
@@ -125,7 +99,6 @@ export async function getDetailProduct(productId) {
         return snapshot.val();
       }
       return [];
-      // console.log("상품이 없거나 가져오는데 일시적인 에러");
   }).catch(console.error)
 }
 
