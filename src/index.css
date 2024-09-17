@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'HakgyoansimPuzzleTTF-Black';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimPuzzleTTF-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-5Medium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+  font-weight: 500,;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-6SemiBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+  font-weight: 600,;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-7Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800,;
+  font-style: normal;
+}
+
+#intro {
+  font-family: 'HakgyoansimPuzzleTTF-Black'
+}
+
+body {
+  width: 100%;
+  padding: 0 calc((100% - 1500px) / 2);
+  margin: 0;
+  @apply text-hover-brand box-border;
+  /* background-color: rgb(253, 253, 252); */
+  font-family: 'Paperlogy-5Medium', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  @apply text-brand;
+}
+
+nav {
+  @apply text-hover-brand;
+}
+
+main > section {
+  padding: 0 0;
+}
+
+section {
+  padding: 0 20px 20px;
+}
+
+section.admin input {
+  @apply focus:border-stone-700 outline-none text-lg;
+  @apply border-b border-gray-300 mb-[15px] h-[45px] pl-[10px];
+}
+
+h2:not(#intro) {
+  @apply my-[20px] h-[50px] font-semibold text-xl w-full flex justify-center items-center border-none;
+}
+
+button {
+  @apply border-none text-white font-semibold bg-brand hover:bg-hover-brand transition-colors;
+}
+
+button:not(#login) {
+  @apply h-[50px]
+  /* @apply ; */
+}
+
+#loader {
+  @apply w-[100px] h-[100px] box-border animate-[rotation_1s_linear_infinite];
+  @apply border-solid border-[10px] border-b-stone-600 rounded-[50%];
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+#productCard img {
+  @apply transition-transform;
+}
+
+#productCard:hover img {
+  @apply scale-105;
+}
