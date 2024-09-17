@@ -74,7 +74,7 @@ export default function Details() {
             {
               notice && <p className='w-max mx-auto my-[10px]'>{notice}</p>
             }
-            <button className='text-white w-full h-[45px] font-semibold bg-stone-600 hover:bg-stone-700 transition-colors mb-[50px]'>장바구니에 추가</button>
+            <button className='text-white w-full h-[45px] font-semibold bg-stone-600 hover:bg-stone-700 transition-colors mb-[30px] md:mb-0'>장바구니에 추가</button>
           </div>
         </form>
       </div>

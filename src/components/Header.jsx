@@ -17,12 +17,12 @@ export default function Header() {
     return (
         <header className='flex w-full justify-between items-center h-[50px] border-b-[1.5px] py-[30px] px-[15px] font-[Paperlogy-7Bold]'>
             <Link className='flex justify-center items-center text-stone-600' to="/">
-                <IoGameController className='mr-[5px] text-2xl'/>
+                <IoGameController className='mr-[10px] text-2xl'/>
                 <h1 className='text-xl hidden sm:block'>Game Shop</h1>
             </Link>
             <nav className='flex items-center'>
-              <div className='flex items-center sm:mr-[30px]'>
-                <Link to='/products' className='text-md flex items-center mr-[10px]'>
+              <div className='flex items-center mr-[5px]'>
+                <Link to='/products' className='text-md flex items-center *:mr-[10px]'>
                   <AiOutlineProduct className='sm:hidden text-2xl' />
                   <p className='hidden sm:block'>Products</p>
                 </Link>
@@ -40,8 +40,8 @@ export default function Header() {
                     </Link>
                 }
                 { user && 
-                    <div className='flex items-center'>
-                        <img className='rounded-full w-[25px] h-[25px] mr-[10px]' src={user.photoURL} alt="" />
+                    <div className='flex items-center *:mr-[10px]'>
+                        <img className='rounded-full w-[25px] h-[25px]' src={user.photoURL} alt="" />
                         <p className='text-lg hidden sm:block'>{user.displayName}</p>
                     </div>
                 }
