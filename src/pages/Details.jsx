@@ -53,8 +53,8 @@ export default function Details() {
         <div className='text-gray-400'>{category}</div>
       </div>
       <div className='md:flex h-max justify-center'>
-        <img className='w-full mb-[15px] md:w-[50%] md:max-w-[500px] md:mb-0 mr-[5px] object-contain' src={imageUrl} alt={name} />
-        <form className='px-[20%] md:w-[50%] flex-1 flex flex-col md:border-l md:px-[15px]' onSubmit={handleSubmit}>
+        <img className='w-full mb-[50px] md:w-[50%] md:max-w-[500px] md:mb-0 mr-[5px] object-contain' src={imageUrl} alt={name} />
+        <form className='px-[10%] md:w-[50%] flex-1 flex flex-col md:border-l md:px-[15px]' onSubmit={handleSubmit}>
           <div className='border-b-[1.5px] flex-1 flex flex-col'>
             <div className='flex-1'>
               <h2 className='!h-auto !justify-start !mt-0 !mb-[5px]'>{name}</h2>
@@ -74,7 +74,7 @@ export default function Details() {
             {
               notice && <p className='w-max mx-auto my-[10px]'>{notice}</p>
             }
-            <button className='text-white w-full h-[45px] font-semibold bg-stone-600 hover:bg-stone-700 transition-colors'>장바구니에 추가</button>
+            <button className='text-white w-full h-[45px] font-semibold bg-stone-600 hover:bg-stone-700 transition-colors mb-[50px]'>장바구니에 추가</button>
           </div>
         </form>
       </div>
