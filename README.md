@@ -58,7 +58,7 @@
     - 백엔드 : Firebase api 기반 통신
 <br />
 
-## 💻  More about servic
+## 💻  More about service
 - 전체 페이지 스타일링, 모바일 기반 반응형 페이지 작업
 - Firebase auth api 기반 google 로그인, 로그아웃 기능 구현
 - Firebase realtime Database 기반 상품 데이터 불러오기, 사용자별 장바구니 기능 구현
